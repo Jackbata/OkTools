@@ -147,3 +147,11 @@ javadoc {
         links "http://docs.oracle.com/javase/7/docs/api"
     }
 }
+//JDK8中的doclint  http://zhk.me/819.html
+if (JavaVersion.current().isJava8Compatible()) {
+    allprojects {
+        tasks.withType(Javadoc) {
+            options.addStringOption('Xdoclint:none', '-quiet')
+        }
+    }
+}
