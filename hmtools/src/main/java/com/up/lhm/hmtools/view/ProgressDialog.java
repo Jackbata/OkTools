@@ -11,10 +11,6 @@ import android.widget.TextView;
 
 import com.up.lhm.hmtools.R;
 
-/**
- * Created by xuhao on 2017/4/30.
- */
-
 public class ProgressDialog extends AlertDialog {
 
     private ProgressBar mProgress;
