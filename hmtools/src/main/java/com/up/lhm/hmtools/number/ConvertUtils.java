@@ -1,6 +1,5 @@
 package com.up.lhm.hmtools.number;
 
-import android.support.annotation.Nullable;
 import android.text.TextUtils;
 
 public class ConvertUtils {
