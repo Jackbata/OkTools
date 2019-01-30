@@ -8,6 +8,7 @@ import android.widget.Button;
 import android.widget.Toast;
 
 import com.up.lhm.hmtools.number.ConvertUtils;
+import com.up.lhm.hmtools.system.ToastUtils;
 
 public class MainActivity extends AppCompatActivity implements OnClickListener {
     /**
@@ -43,7 +44,8 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
         switch (id) {
             case R.id.btn_log:
                 int i = ConvertUtils.convert2Int("1314.22");
-                Toast.makeText(this, i + "", Toast.LENGTH_SHORT).show();
+                ToastUtils.setBgColor(getResources().getColor(R.color.colorAccent));
+                ToastUtils.showShort(i+"");
                 break;
             case R.id.btn_dialog:
                 break;
