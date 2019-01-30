@@ -5,6 +5,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
+import android.widget.Toast;
+
+import com.up.lhm.hmtools.number.ConvertUtils;
 
 public class MainActivity extends AppCompatActivity implements OnClickListener {
     /**
@@ -39,7 +42,8 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
         int id = v.getId();
         switch (id) {
             case R.id.btn_log:
-
+                int i = ConvertUtils.convert2Int("1314.22");
+                Toast.makeText(this, i + "", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.btn_dialog:
                 break;
