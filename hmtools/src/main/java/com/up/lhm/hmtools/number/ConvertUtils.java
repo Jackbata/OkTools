@@ -3,16 +3,11 @@ package com.up.lhm.hmtools.number;
 import android.support.annotation.Nullable;
 import android.text.TextUtils;
 
-/**
- * @page
- * @data 2017-03-20
- */
-
 public class ConvertUtils {
     private ConvertUtils() {
     }
 
-    public static double convert2Double(@Nullable String d) {
+    public static double convert2Double( String d) {
         if (TextUtils.isEmpty(d)) {
             return 0;
         }
@@ -24,7 +19,7 @@ public class ConvertUtils {
         return 0;
     }
 
-    public static long convert2Long(@Nullable String d) {
+    public static long convert2Long( String d) {
         if (TextUtils.isEmpty(d)) {
             return -1;
         }
@@ -37,7 +32,7 @@ public class ConvertUtils {
     }
 
 
-    public static int convert2Int(@Nullable String d) {
+    public static int convert2Int( String d) {
         if (TextUtils.isEmpty(d)) {
             return -1;
         }
