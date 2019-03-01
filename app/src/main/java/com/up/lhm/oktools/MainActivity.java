@@ -18,6 +18,10 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
      * 弹窗
      */
     private Button mBtnDialog;
+    /**
+     * 跳转到新页面
+     */
+    private Button mBtnJump;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,11 +34,13 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
     private void initView() {
         mBtnLog = findViewById(R.id.btn_log);
         mBtnDialog = findViewById(R.id.btn_dialog);
+        mBtnJump = findViewById(R.id.btn_jump);
     }
 
     private void setListener() {
         mBtnLog.setOnClickListener(this);
         mBtnDialog.setOnClickListener(this);
+        mBtnJump.setOnClickListener(this);
     }
 
     @Override
@@ -47,6 +53,9 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
                 ToastUtils.showShort(i+"");
                 break;
             case R.id.btn_dialog:
+                break;
+            case R.id.btn_jump:
+                TextActivity.start(MainActivity.this,false);
                 break;
             default:
                 break;
