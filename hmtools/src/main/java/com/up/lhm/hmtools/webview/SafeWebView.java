@@ -188,6 +188,7 @@ public class SafeWebView extends WebView {
      * 如果版本为 4.2 以及 4.2 以上，则使用父类的removeJavascriptInterface。
      * 如果版本小于 4.2，则从缓存 map 中删除注入对象
      */
+    @Override
     @SuppressLint("NewApi")
     public void removeJavascriptInterface(String interfaceName) {
         if (hasJellyBeanMR1()) {
